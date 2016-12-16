@@ -1,6 +1,6 @@
-# Package repository for [Server-Mechanic](https://github.com/server-mechanic) **unstable**.
+# Package repository for [Server-Mechanic](https://github.com/server-mechanic) *unstable*.
 
-## Ubuntu xenial **unstable**
+## Ubuntu xenial *unstable*
 
 ```
 cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
