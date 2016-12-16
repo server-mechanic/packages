@@ -5,7 +5,7 @@ Essential: no
 Maintainer: Cornelius Buschka <c.buschka@gmx.de>
 Installed-Size: 24981
 Depends: sqlite3
-Filename: xenial/unstable/binary-amd64//mechanic_0.1-0ubuntu1_amd64.deb
+Filename: dists/xenial/unstable/binary-amd64//mechanic_0.1-0ubuntu1_amd64.deb
 Size: 2301314
 MD5sum: 741ba154887a5fef9d1dcbeda9437410
 SHA1: f8cebf47a56c927102c2743ce5f7d3dce0e6a390
