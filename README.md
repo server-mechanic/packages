@@ -2,7 +2,7 @@
 
 ![Server Mechanic](https://server-mechanic.github.io/website/images/mechanic.png "Server Mechanic")
 
-## Ubuntu xenial for mechanic *unstable*
+## mechanic *unstable* on ubuntu xenial
 
 ```
 cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
