@@ -1,15 +1,15 @@
 Package: mechanic
-Version: 0.1-0ubuntu1
+Version: 0.1-0ubuntu-xenial2
 Architecture: amd64
 Essential: no
 Maintainer: Cornelius Buschka <c.buschka@gmx.de>
 Installed-Size: 24981
 Depends: sqlite3
-Filename: dists/xenial/unstable/binary-amd64//mechanic_0.1-0ubuntu1_amd64.deb
-Size: 2301314
-MD5sum: 741ba154887a5fef9d1dcbeda9437410
-SHA1: f8cebf47a56c927102c2743ce5f7d3dce0e6a390
-SHA256: ea2c44375f60ef472519a2da7e14c5da24be384e2de1c4f13f13646548efaa3c
+Filename: dists/xenial/unstable/binary-amd64//mechanic_0.1-0ubuntu-xenial2_amd64.deb
+Size: 2298904
+MD5sum: d3a8391621e621dc2ee92660096089c5
+SHA1: 112784c5054df540d6ddc3dcc4796352eb0e7d3a
+SHA256: afc359e1f4830fc0264a406c6ac47e9483ef5e448f6014d5e267d9c49f132051
 Section: system
 Priority: optional
 Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
