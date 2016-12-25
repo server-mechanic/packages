@@ -1,12 +1,14 @@
 #!/bin/bash -x
 
+. /etc/lsb-release
+
 export DEBIAN_FRONTEND=noninteractive
 
 echo "Installing https transport..."
 apt-get update && apt-get -y install apt-transport-https
 
 echo "Adding mechanic repo..."
-echo "deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/ubuntu/ xenial unstable" > /etc/apt/sources.list.d/server-mechanic-unstable.list
+echo "deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/ubuntu/ ${DISTRIB_CODENAME} unstable" > /etc/apt/sources.list.d/server-mechanic-unstable.list
 
 echo "Installing mechanic..."
 apt-get update && apt-get install -y mechanic
