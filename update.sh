@@ -9,6 +9,7 @@ for d in apt/*; do
 	done
 done
 
+cd $PROJECT_DIR/apt
 for f in $(find . -name "Packages"); do 
 	bzip2 -c $f > $f.bz2
 	gzip -c $f >$f.gz
