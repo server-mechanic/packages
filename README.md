@@ -1,4 +1,4 @@
-# Package repository for [Server Mechanic](https://github.com/server-mechanic)
+# Package repository for [Server Mechanic](https://github.com/server-mechanic/mechanic)
 
 ![Server Mechanic](https://server-mechanic.github.io/website/images/mechanic.png "Server Mechanic")
 
