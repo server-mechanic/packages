@@ -26,12 +26,3 @@ EOB
 apt-get update && apt-get install -y mechanic
 ```
 
-### debian jessie
-
-```
-cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
-deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ jessie unstable
-EOB
-
-apt-get update && apt-get install -y mechanic
-```
