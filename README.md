@@ -2,7 +2,9 @@
 
 ![Server Mechanic](https://server-mechanic.github.io/website/images/mechanic.png "Server Mechanic")
 
-## mechanic *unstable* on ubuntu xenial
+## mechanic *unstable*
+
+### ubuntu xenial
 
 ```
 cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
@@ -14,7 +16,7 @@ apt-get update && apt-get install -y mechanic
 /usr/sbin/mechanic version
 ```
 
-## mechanic *unstable* on ubuntu yakkety
+## ubuntu yakkety
 
 ```
 cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
