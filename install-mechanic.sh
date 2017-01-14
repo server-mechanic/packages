@@ -98,6 +98,6 @@ else
   exit 1
 fi
 
-print_banner Server Mechanic successfully installed.
+print_banner Done.
 
 exit 0
