@@ -25,14 +25,19 @@ function install_debian_based() {
   dist=$1
   release=$2
 
+  echo "Installing apt https transport..."
   apt-get update && apt-get install -y apt-transport-https
-cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
+
+  echo "Adding server mechanic repo for $dist:$release..."
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/${dist}/ ${release} ${channel}
 EOB
-cat /etc/apt/sources.list.d/server-mechanic.list
+
+  echo "Installing server mechanic..."
   apt-get update && apt-get install -y mechanic
 
   /usr/sbin/mechanic version
+  echo "Done."
 }
 
 if [[ -f "/etc/lsb-release" ]]; then
