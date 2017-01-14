@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_DIR=$(cd `dirname $0`; pwd)
+PROJECT_DIR=$(cd `dirname $0`/..; pwd)
 
 for d in apt/*; do
 	cd $PROJECT_DIR/$d
