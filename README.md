@@ -1,4 +1,4 @@
-# Package repository for [Server Mechanic](https://github.com/server-mechanic/mechanic)
+# Package repository for [Server Mechanic](https://github.com/server-mechanic/mechanic) [![Build Status](https://travis-ci.org/server-mechanic/packages.svg)](https://travis-ci.org/server-mechanic/packages)
 
 ![Server Mechanic](https://server-mechanic.github.io/website/images/mechanic_small.png "Server Mechanic")
 
