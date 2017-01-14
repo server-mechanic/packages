@@ -4,6 +4,16 @@
 
 ## mechanic *unstable*
 
+Server Mechanic is supported on:
+* Ubuntu: xenial, yakkety
+* Debian: jessie (currently broken), sid
+
+### Simple install
+
+```
+curl -s https://raw.githubusercontent.com/server-mechanic/packages/master/install-mechanic.sh | sudo bash -s unstable
+```
+
 ### debian jessie
 
 #### Support for debian jessie is broken now because of apt rejecting install via https.
@@ -11,7 +21,7 @@
 ```
 apt-get update && apt-get install -y apt-transport-https
 
-cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ jessie unstable
 EOB
 
@@ -25,7 +35,7 @@ apt-get update && apt-get install -y mechanic
 ```
 apt-get update && apt-get install -y apt-transport-https
 
-cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ sid unstable
 EOB
 
@@ -39,7 +49,7 @@ apt-get update && apt-get install -y mechanic
 ```
 apt-get update && apt-get install -y apt-transport-https
 
-cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/ubuntu/ xenial unstable
 EOB
 
@@ -53,7 +63,7 @@ apt-get update && apt-get install -y mechanic
 ```
 apt-get update && apt-get install -y apt-transport-https
 
-cat - >/etc/apt/sources.list.d/server-mechanic-unstable.list <<EOB
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/ubuntu/ yakkety unstable
 EOB
 
