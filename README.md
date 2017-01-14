@@ -6,7 +6,7 @@
 
 ### debian jessie
 
-/Support for debian jessie is broken now because of apt rejecting install via https./
+#### Support for debian jessie is broken now because of apt rejecting install via https.
 
 ```
 apt-get update && apt-get install -y apt-transport-https
