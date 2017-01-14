@@ -2,5 +2,8 @@
 
 PROJECT_DIR=$(cd `dirname $0`/..; pwd)
 
-docker run --rm -v $PROJECT_DIR:/build ubuntu:xenial /bin/bash -x /build/scripts/verify-ubuntu.sh
-docker run --rm -v $PROJECT_DIR:/build ubuntu:yakkety /bin/bash -x /build/scripts/verify-ubuntu.sh
+for d in debian:sid ubuntu:xenial ubuntu:yakkety; do
+	curl -s https://raw.githubusercontent.com/server-mechanic/packages/master/install-mechanic.sh \
+	| docker run -i $d /bin/bash -s unstable
+done 
+
