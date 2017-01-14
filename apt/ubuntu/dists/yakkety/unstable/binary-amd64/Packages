@@ -1,15 +1,15 @@
 Package: mechanic
-Version: 0.4-0ubuntu-yakkety1
+Version: 0.4-0ubuntu-yakkety2
 Architecture: amd64
 Essential: no
 Maintainer: Cornelius Buschka <c.buschka@gmx.de>
-Installed-Size: 126581
+Installed-Size: 127761
 Depends: sqlite3
-Filename: dists/yakkety/unstable/binary-amd64//mechanic_0.4-0ubuntu-yakkety1_amd64.deb
-Size: 25456
-MD5sum: acd845854c0db90dc933c3fd7455e7d1
-SHA1: 2d390644c6032a139e3168e5211814ca74ef0f7f
-SHA256: 7cd44a2aee7e938a83d697262475d55a2018d0b631cd52ed473fcd49e47de92a
+Filename: dists/yakkety/unstable/binary-amd64//mechanic_0.4-0ubuntu-yakkety2_amd64.deb
+Size: 25988
+MD5sum: a08edf7bb7a136260ad778e575d3f565
+SHA1: 8ac8cfc91ed1fd6a285f69be9a41469fda37df0a
+SHA256: 7733bb445e2c6cdbdbfcf8e82d861256b07de614f31c96c2d54eccdf1d84b3f7
 Section: system
 Priority: optional
 Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
