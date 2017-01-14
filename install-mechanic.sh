@@ -37,7 +37,6 @@ EOB
   apt-get update && apt-get install -y mechanic
 
   /usr/sbin/mechanic version
-  echo "Done."
 }
 
 if [[ -f "/etc/lsb-release" ]]; then
