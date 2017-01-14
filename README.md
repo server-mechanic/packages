@@ -8,7 +8,7 @@ Server Mechanic is supported on:
 * Ubuntu: xenial, yakkety
 * Debian: jessie (currently broken), sid
 
-### Simple install
+### Simple install (for all supported distributions)
 
 ```
 curl -s https://raw.githubusercontent.com/server-mechanic/packages/master/install-mechanic.sh | sudo bash -s unstable
