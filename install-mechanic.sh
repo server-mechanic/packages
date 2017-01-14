@@ -11,6 +11,16 @@ if [[ "$UID" != "0" ]]; then
   exit 1
 fi
 
+function print_banner() {
+	echo "***************************************************"
+	echo "*"
+	echo "* " $*
+	echo "*"
+	echo "***************************************************"
+}
+
+print_banner Installing Server Mechanic ${channel}...
+
 function install_debian_based() {
   dist=$1
   release=$2
@@ -82,5 +92,7 @@ else
   echo "Unsupported linux."
   exit 1
 fi
+
+print_banner Server Mechanic successfully installed.
 
 exit 0
