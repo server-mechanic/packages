@@ -70,3 +70,6 @@ EOB
 apt-get update && apt-get install -y mechanic
 ```
 
+## Issues
+
+Please raise issues at [Issue list of Server Mechanic](https://github.com/server-mechanic/mechanic/issues).
