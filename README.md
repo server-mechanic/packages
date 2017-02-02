@@ -6,7 +6,7 @@
 
 Server Mechanic is supported on:
 * Ubuntu: xenial, yakkety
-* Debian: jessie (currently broken), sid
+* Debian: wheezy, jessie (currently broken), sid
 
 ### Simple install (for all supported distributions)
 
@@ -37,6 +37,20 @@ apt-get update && apt-get install -y apt-transport-https
 
 cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ sid unstable
+EOB
+
+apt-get update && apt-get install -y mechanic
+
+/usr/sbin/mechanic version
+```
+
+### debian wheezy
+
+```
+apt-get update && apt-get install -y apt-transport-https
+
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
+deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ wheezy unstable
 EOB
 
 apt-get update && apt-get install -y mechanic
