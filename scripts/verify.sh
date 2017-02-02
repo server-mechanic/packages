@@ -11,7 +11,7 @@ function verify() {
 if [[ ! -z "$1" ]]; then
   verify $1
 else
-  for d in debian:sid ubuntu:xenial ubuntu:yakkety; do
+  for d in debian:sid debian:wheezy ubuntu:xenial ubuntu:yakkety; do
     verify $d
   done 
 fi

@@ -60,6 +60,9 @@ elif [[ -f "/etc/debian_version" ]]; then
       echo "Sorry debian jessie support is currently broken."
       exit 1
     ;;
+    *7.*|*wheezy*)
+      install_debian_based debian wheezy
+    ;;
     stretch/sid)
       install_debian_based debian sid
     ;;
