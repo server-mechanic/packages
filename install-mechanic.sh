@@ -57,8 +57,7 @@ elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
   case $debian_version in
     *8.*|*jessie*)
-      echo "Sorry debian jessie support is currently broken."
-      exit 1
+      install_debian_based debian jessie
     ;;
     *7.*|*wheezy*)
       install_debian_based debian wheezy
