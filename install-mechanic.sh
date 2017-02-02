@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 channel=$1
 if [[ "unstable" != "${channel}" ]]; then
