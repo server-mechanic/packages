@@ -6,10 +6,10 @@ Maintainer: Cornelius Buschka <c.buschka@gmx.de>
 Installed-Size: 169663
 Depends: bash, python2.7, sqlite3
 Filename: dists/jessie/unstable/binary-amd64//mechanic_0.5-3_amd64.deb
-Size: 28974
-MD5sum: 01d1a5f8abc1c34461227e90b20fb941
-SHA1: 44d0b5ddf8d77f6aecee58dcc21776dd8d29d55f
-SHA256: 40c4d7a57d54d3958cabc0bec4935090f46c52b1b296a6b199f8857894861b2f
+Size: 23142
+MD5sum: 1790d69ad108b2c3c82f5e627d117b26
+SHA1: 373c4a5cda9de5cdca6ee0b77dec01bcc0d7d3b4
+SHA256: e412b0d6db7a7ccdc6fbe71dca81d90e778d65b6cb86b6d8fe28b9c71fa7ecf5
 Section: system
 Priority: optional
 Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.

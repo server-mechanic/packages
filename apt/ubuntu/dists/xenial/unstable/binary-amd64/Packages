@@ -6,10 +6,10 @@ Maintainer: Cornelius Buschka <c.buschka@gmx.de>
 Installed-Size: 169663
 Depends: bash, python2.7, sqlite3
 Filename: dists/xenial/unstable/binary-amd64//mechanic_0.5-0ubuntu-xenial3_amd64.deb
-Size: 23094
-MD5sum: be1ad4d8579883670ea83e4572797f39
-SHA1: f07cb144e2fb2ad651f905907548b50703de1a0d
-SHA256: 7194b48a38c700edcddced69cbd2d5679430313f5aabb698c66fada5fbc03de8
+Size: 23120
+MD5sum: dc7510c6a309854117dfbf9ea9ee35cd
+SHA1: e993f3e63c3a31a948e82e6c77496aa966f0a910
+SHA256: 1efce2eb54ba94e72b7d5c38be9b7e6894f975076980a85b87e0b05b8afe315b
 Section: system
 Priority: optional
 Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
