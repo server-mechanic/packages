@@ -1,0 +1,16 @@
+Package: mechanic
+Version: 0.6-0ubuntu-xenial1
+Architecture: all
+Essential: no
+Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
+Installed-Size: 175054
+Depends: bash, python2.7, sqlite3
+Filename: dists/xenial/unstable/binary-amd64//mechanic_0.6-0ubuntu-xenial1_amd64.deb
+Size: 23982
+MD5sum: bfe554e6bf6603145df751209cf0d8b6
+SHA1: 4e03a5cd5365cc1d6928e32f11b952a152ebf9b1
+SHA256: 5a82cddd130044e1466c86c40721c17a6e151ebb257d5a9c6a0825488125bf02
+Section: system
+Priority: optional
+Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
+
