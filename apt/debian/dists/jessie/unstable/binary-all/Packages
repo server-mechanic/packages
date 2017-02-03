@@ -1,0 +1,16 @@
+Package: mechanic
+Version: 0.6-0jessie0
+Architecture: all
+Essential: no
+Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
+Installed-Size: 175054
+Depends: bash, python2.7, sqlite3
+Filename: dists/jessie/unstable/binary-all//mechanic_0.6-0jessie0_all.deb
+Size: 24014
+MD5sum: 1e9664000dff9835bdf903ba1538805e
+SHA1: 66f2a2ee8900b7173ee543c06872df0bd0b67028
+SHA256: 6f1a67d4f41b10197bd09f5e265615fccde1af1e5f5a55ec121620a9c22d1390
+Section: system
+Priority: optional
+Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
+
