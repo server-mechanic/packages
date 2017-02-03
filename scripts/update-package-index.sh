@@ -5,7 +5,7 @@ PROJECT_DIR=$(cd `dirname $0`/..; pwd)
 for d in apt/*; do
 	cd $PROJECT_DIR/$d
 	for v in dists/*/unstable; do
-		dpkg-scanpackages $v/binary-amd64/ > $v/binary-amd64/Packages
+		dpkg-scanpackages $v/binary-all/ > $v/binary-all/Packages
 	done
 done
 
