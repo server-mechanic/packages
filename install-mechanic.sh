@@ -11,6 +11,8 @@ if [[ "$UID" != "0" ]]; then
   exit 1
 fi
 
+echo "This is $(md5sum $0)."
+
 function print_banner() {
 	echo "***************************************************"
 	echo "*"
