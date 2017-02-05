@@ -56,14 +56,14 @@ if [[ -f "/etc/lsb-release" ]]; then
 elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
   case $debian_version in
+    *9.*|*sid*)
+      install_debian_based debian sid
+    ;;
     *8.*|*jessie*)
       install_debian_based debian jessie
     ;;
     *7.*|*wheezy*)
       install_debian_based debian wheezy
-    ;;
-    stretch/sid)
-      install_debian_based debian sid
     ;;
     *)
       echo "Unsupported debian. ($debian_version)"
