@@ -106,7 +106,7 @@ elif [[ -f "/etc/redhat-release" ]]; then
   redhat_version=$(cat /etc/redhat-release)
   case $redhat_version in
     *CentOS*7.*)
-      echo "CentOS is currently not supported. ($redhat_version)"
+      install_redhat_based centos 7
       exit 1
     ;;
     *)
