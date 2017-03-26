@@ -16,10 +16,11 @@ else
     exit_code=$?
     if [ "$exit_code" != "0" ]; then
       echo "$d FAILED with $exit_code."
+      exit 1
     else
       echo "$d OK."
     fi
   done 
 fi
 
-
+exit 0
