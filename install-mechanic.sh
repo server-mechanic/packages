@@ -38,7 +38,25 @@ EOB
   echo "Installing server mechanic..."
   apt-get update && apt-get install -y mechanic
 
-  /usr/sbin/mechanic version
+  /usr/bin/mechanic version
+}
+
+function install_redhat_based() {
+  dist=$1
+  release=$2
+
+  cat - >/etc/yum.repos.d/server-mechanic.repo <<EOB
+[servermechanicrepo]
+name=Server Mechanic Repository
+baseurl=https://raw.githubusercontent.com/server-mechanic/packages/master/rpm/fedora/\$releasever/unstable/x86_64
+enabled=1
+gpgcheck=0
+EOB
+
+  echo "Installing server mechanic..."
+  yum install -y mechanic
+
+  /usr/bin/mechanic version
 }
 
 if [[ -f "/etc/lsb-release" ]]; then
@@ -76,7 +94,7 @@ elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
     *25*)
-      echo "Fedora 25 is currently not supported. ($fedora_version)"
+      install_redhat_based fedora 25
       exit 1
     ;;
     *)
