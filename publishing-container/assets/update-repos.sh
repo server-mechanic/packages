@@ -6,10 +6,12 @@ if [ "x$BUILD_DIR" == "x" ]; then
   exit 1
 fi
 
+find $BUILD_DIR/apt -name "Packages*" | xargs rm
+
 function updateAptRepos() {
-for d in apt/*; do
-	cd $BUILD_DIR/$d
-	for v in dists/*/unstable; do
+for d in debian/dists/wheezy debian/dists/jessie debian/dists/sid ubuntu/dists/xenial ubuntu/dists/yakkety; do
+	cd $BUILD_DIR/apt/$d
+	for v in unstable; do
 		dpkg-scanpackages $v/binary-amd64/ > $v/binary-amd64/Packages
 		dpkg-scanpackages $v/binary-i386/ > $v/binary-i386/Packages
 	done

@@ -13,6 +13,12 @@ if [[ ! -z "$1" ]]; then
 else
   for d in debian:sid debian:wheezy ubuntu:xenial ubuntu:yakkety fedora:25 centos:7; do
     verify $d
+    exit_code=$?
+    if [ "$exit_code" != "0" ]; then
+      echo "$d FAILED with $exit_code."
+    else
+      echo "$d OK."
+    fi
   done 
 fi
 
