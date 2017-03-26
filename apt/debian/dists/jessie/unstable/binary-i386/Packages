@@ -5,7 +5,7 @@ Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
 Installed-Size: 146384
 Depends: bash, python2.7, sqlite3
-Filename: unstable/binary-i386//mechanic_0.7-0jessie1_all.deb
+Filename: dists/jessie/unstable/binary-i386//mechanic_0.7-0jessie1_all.deb
 Size: 10434
 MD5sum: 28b6b4d1bbea71b5e52da275216bba8e
 SHA1: 55e945701be7d4c50e94415b2ef7eb9c17ce77d8

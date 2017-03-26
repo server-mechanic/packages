@@ -5,7 +5,7 @@ Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
 Installed-Size: 146384
 Depends: bash, python2.7, sqlite3
-Filename: unstable/binary-i386//mechanic_0.7-0wheezy1_all.deb
+Filename: dists/wheezy/unstable/binary-i386//mechanic_0.7-0wheezy1_all.deb
 Size: 11278
 MD5sum: 2415d1896632b98b5b0dd8b46e77f5ff
 SHA1: bffff4d9f5ef137621042135069cd3ca98573579

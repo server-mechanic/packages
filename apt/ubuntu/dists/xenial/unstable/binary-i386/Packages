@@ -5,7 +5,7 @@ Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
 Installed-Size: 146384
 Depends: bash, python2.7, sqlite3
-Filename: unstable/binary-i386//mechanic_0.7-0ubuntu-xenial1_all.deb
+Filename: dists/xenial/unstable/binary-i386//mechanic_0.7-0ubuntu-xenial1_all.deb
 Size: 10388
 MD5sum: fbf3a4844dd946a68afedb84d26b6d0d
 SHA1: ec2b281db627c23f0b5d7f6124ec446163ceb77e

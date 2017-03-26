@@ -5,7 +5,7 @@ Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
 Installed-Size: 146384
 Depends: bash, python2.7, sqlite3
-Filename: unstable/binary-amd64//mechanic_0.7-0ubuntu-yakkety1_all.deb
+Filename: dists/yakkety/unstable/binary-amd64//mechanic_0.7-0ubuntu-yakkety1_all.deb
 Size: 10296
 MD5sum: 4dee4be662f3ebe156f2acceedce3ef5
 SHA1: 8b7f94b937bba497d85038026b9e2361a6967637

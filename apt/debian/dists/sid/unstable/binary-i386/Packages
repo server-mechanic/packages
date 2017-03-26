@@ -5,7 +5,7 @@ Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
 Installed-Size: 146384
 Depends: bash, python2.7, sqlite3
-Filename: unstable/binary-i386//mechanic_0.7-0sid1_all.deb
+Filename: dists/sid/unstable/binary-i386//mechanic_0.7-0sid1_all.deb
 Size: 10288
 MD5sum: b9a5ab5408dc4aa68fc729ff620cea91
 SHA1: 40433d3a37efadb355466707e6be74fe52f33420

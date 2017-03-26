@@ -6,18 +6,22 @@ if [ "x$BUILD_DIR" == "x" ]; then
   exit 1
 fi
 
-find $BUILD_DIR/apt -name "Packages*" | xargs rm
-
-function updateAptRepos() {
-for d in debian/dists/wheezy debian/dists/jessie debian/dists/sid ubuntu/dists/xenial ubuntu/dists/yakkety; do
-	cd $BUILD_DIR/apt/$d
-	for v in unstable; do
-		dpkg-scanpackages $v/binary-amd64/ > $v/binary-amd64/Packages
-		dpkg-scanpackages $v/binary-i386/ > $v/binary-i386/Packages
-	done
+for p in $(find $BUILD_DIR/apt -name "Packages*"); do
+  rm $p
 done
 
-cd $BUILD_DIR/apt
+function updateAptRepos() {
+  local dist=$1
+  local release=$2
+  local path=dists/$release
+  
+  cd $BUILD_DIR/apt/$dist
+  for v in unstable; do
+    dpkg-scanpackages $path/$v/binary-i386/ > $path/$v/binary-i386/Packages
+    dpkg-scanpackages $path/$v/binary-amd64/ > $path/$v/binary-amd64/Packages
+  done
+
+  cd $BUILD_DIR/apt
 for f in $(find . -name "Packages"); do 
 	bzip2 -c $f > $f.bz2
 	gzip -c $f >$f.gz
@@ -34,5 +38,10 @@ for dist_dir in fedora/25/unstable centos/7/unstable; do
 done
 }
 
-updateAptRepos
+updateAptRepos debian wheezy
+updateAptRepos debian jessie
+updateAptRepos debian sid
+updateAptRepos ubuntu xenial
+updateAptRepos ubuntu yakkety
+
 updateRpmRepos
