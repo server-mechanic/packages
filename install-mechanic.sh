@@ -48,7 +48,7 @@ function install_redhat_based() {
   cat - >/etc/yum.repos.d/server-mechanic.repo <<EOB
 [servermechanicrepo]
 name=Server Mechanic Repository
-baseurl=https://raw.githubusercontent.com/server-mechanic/packages/master/rpm/fedora/\$releasever/unstable/x86_64
+baseurl=https://raw.githubusercontent.com/server-mechanic/packages/master/rpm/$dist/\$releasever/unstable/\$basearch
 enabled=1
 gpgcheck=0
 EOB
