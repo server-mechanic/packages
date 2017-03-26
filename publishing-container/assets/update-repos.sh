@@ -24,7 +24,7 @@ done
 
 function updateRpmRepos() {
 repo_base_dir=$BUILD_DIR/rpm/fedora/25/unstable
-for arch in i386 x86_64; do 
+for arch in i686 x86_64; do 
 repo_dir=$repo_base_dir/$arch
 mkdir -p $repo_dir && cd $repo_dir && createrepo .
 done
