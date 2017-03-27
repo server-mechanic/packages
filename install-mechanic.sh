@@ -1,13 +1,47 @@
 #!/bin/bash -e
 
+force="no"
+channel=""
+
+function check_tools() {
+  local bin=""
+  local i=""
+  for i in $*; do 
+    bin=$(which $i)
+    if [[ -z "$bin" ]]; then
+      echo "$bin is required but is not in path."
+      exit 1
+    fi
+  done
+}
+
+check_tools curl cat mktemp
+
+function parse_opts() {
+  for i in $*; do
+    case $i in
+      stable|unstable)
+        channel=$i
+      ;;
+      -f|--force)
+        force="yes"
+      ;;
+      *)
+        echo "Unknown flag $i." >&2
+    esac
+  done
+}
+
+parse_opts $*
+
 channel=$1
 if [[ "unstable" != "${channel}" ]]; then
   echo "The only channel is unstable for now. So call it $0 unstable"
   exit 1
 fi
 
-if [[ "$UID" != "0" ]]; then
-  echo "Must be run as root."
+if [[ "$force" != "yes" && "$UID" != "0" ]]; then
+  echo "Must be run as root. (Use -f|--force to override.)"
   exit 1
 fi
 
@@ -57,6 +91,13 @@ EOB
   yum install -y mechanic
 
   /usr/bin/mechanic version
+}
+
+function install_unsupported() {
+  local tmpsh=$(mktemp)
+  curl -s https://raw.githubusercontent.com/server-mechanic/packages/master/bash-installer/latest.sh -o $tmpsh
+  chmod 755 $tmpsh
+  ./$tmpsh
 }
 
 if [[ -f "/etc/lsb-release" ]]; then
@@ -115,8 +156,13 @@ elif [[ -f "/etc/redhat-release" ]]; then
     ;;
   esac
 else
-  echo "Unsupported linux."
-  exit 1
+  if [[ "$force" == "yes" ]]; then
+    echo "Installing server mechanic via bash installer..."
+    install_unsupported
+  else
+    echo "Unsupported OS. (Use -f|--force to force installation via bash installer.)"
+    exit 1
+  fi
 fi
 
 print_banner Done.
