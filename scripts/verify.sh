@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash 
 
 PROJECT_DIR=$(cd `dirname $0`/..; pwd)
 
