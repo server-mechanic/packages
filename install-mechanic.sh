@@ -201,11 +201,9 @@ elif [[ -f "/etc/fedora-release" ]]; then
   case $fedora_version in
     *26*)
       install_redhat_based fedora 26
-      exit 1
     ;;
     *25*)
       install_redhat_based fedora 25
-      exit 1
     ;;
     *)
       echo "Unsupported fedora. ($fedora_version)"
@@ -217,7 +215,6 @@ elif [[ -f "/etc/redhat-release" ]]; then
   case $redhat_version in
     *CentOS*7.*)
       install_redhat_based centos 7
-      exit 1
     ;;
     *)
       echo "Unsupported redhat. ($redhat_version)"
