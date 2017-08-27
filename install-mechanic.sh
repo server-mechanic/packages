@@ -13,8 +13,8 @@ function install_prerequesites() {
 if [[ -f "/etc/lsb-release" ]]; then
   source /etc/lsb-release
   case "$DISTRIB_ID$DISTRIB_CODENAME" in
-    Ubuntu*)
-      apt-get install -y curl
+    Ubuntuxenial|Ubuntuyakkety|Ubuntuzesty)
+      apt-get update && apt-get install -y curl
     ;;
     *)
       echo "Unsupported lsb linux $DISTRIB_ID $DISTRIB_CODENAME."
@@ -29,6 +29,10 @@ elif [[ -f "/etc/debian_version" ]]; then
     ;;
     *wheezy*|*jessie*|*stretch*)
       apt-get update && apt-get install -y curl
+    ;;
+    *)
+      echo "Unsupported debian. ($debian_version)"
+      exit 1
     ;;
   esac
 elif [[ -f "/etc/fedora-release" ]]; then
