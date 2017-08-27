@@ -6,10 +6,11 @@ channel=""
 function check_tools() {
   local bin=""
   local i=""
+  local path=""
   for i in $*; do 
-    bin=$(which $i)
-    if [[ -z "$bin" ]]; then
-      echo "$bin is required but is not in path."
+    path=$(which $i)
+    if [[ -z "$path" ]]; then
+      echo "$i is required but is not in path."
       exit 1
     fi
   done
