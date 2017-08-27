@@ -39,7 +39,7 @@ elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
     *26*|*25*)
-      dnf -y install curl
+      dnf -y install which curl
     ;;
     *)
       echo "Unsupported fedora. ($fedora_version)"
@@ -50,7 +50,7 @@ elif [[ -f "/etc/redhat-release" ]]; then
   redhat_version=$(cat /etc/redhat-release)
   case $redhat_version in
     *CentOS*7.*)
-      yum -y install curl
+      yum -y install which curl
       exit 1
     ;;
     *)
