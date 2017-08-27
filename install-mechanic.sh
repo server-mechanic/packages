@@ -24,10 +24,10 @@ if [[ -f "/etc/lsb-release" ]]; then
 elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
   case $debian_version in
-    *sid*)
+    *sid*|*10.*)
       apt-get update && apt-get remove -y apt-listchanges && apt-get install -y curl
     ;;
-    *wheezy*|*jessie*|*stretch*)
+    *wheezy*|*7.*|*jessie*|*8.*|*stretch*|*9.*)
       apt-get update && apt-get install -y curl
     ;;
     *)
