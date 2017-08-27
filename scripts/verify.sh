@@ -9,24 +9,27 @@ function verify() {
 }
 
 result=""
+packages=$*
 
-if [[ ! -z "$1" ]]; then
-  verify $1
-else
-  for d in debian:sid debian:stretch debian:jessie debian:wheezy ubuntu:xenial ubuntu:yakkety ubuntu:zesty fedora:25 fedora:26 centos:7; do
-    verify $d
-    exit_code=$?
-    if [ "$exit_code" != "0" ]; then
-      result="$result $d(FAILED)"
-      exit 1
-    else
-      result="$result $d(OK)"
-    fi
-  done 
+if [[ -z "$1" ]]; then
+  packages="debian:sid debian:stretch debian:jessie debian:wheezy ubuntu:xenial ubuntu:yakkety ubuntu:zesty fedora:25 fedora:26 centos:7"
 fi
+
+echo "Verifying $packages..."
+for d in $packages; do
+  verify $d
+  exit_code=$?
+  if [ "$exit_code" != "0" ]; then
+    result="$result $d(FAILED)"
+  else
+    result="$result $d(OK)"
+  fi
+done 
+
+echo "Result of verification:"
 echo $result
 
-if [ $(echo "$result" | grep "FAILED") ]; then
+if [[ ! -z $(echo "$result" | grep "FAILED") ]]; then
  exit 1
 fi
 
