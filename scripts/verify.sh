@@ -12,7 +12,7 @@ result=""
 packages=$*
 
 if [[ -z "$1" ]]; then
-  packages="debian:sid debian:stretch debian:jessie debian:wheezy ubuntu:xenial ubuntu:yakkety ubuntu:zesty fedora:25 fedora:26 centos:7"
+  packages="debian:sid debian:stretch debian:wheezy ubuntu:xenial ubuntu:yakkety ubuntu:zesty fedora:25 fedora:26 centos:7"
 fi
 
 echo "Verifying $packages..."
