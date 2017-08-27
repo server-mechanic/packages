@@ -3,6 +3,58 @@
 force="no"
 channel=""
 
+if [[ "$force" != "yes" && "$UID" != "0" ]]; then
+  echo "Must be run as root. (Use -f|--force to override.)"
+  exit 1
+fi
+
+function install_prerequesites() {
+  echo "Installing prerequesites..."
+if [[ -f "/etc/lsb-release" ]]; then
+  source /etc/lsb-release
+  case "$DISTRIB_ID$DISTRIB_CODENAME" in
+    Ubuntu*)
+      apt-get install -y curl
+    ;;
+    *)
+      echo "Unsupported lsb linux $DISTRIB_ID $DISTRIB_CODENAME."
+      exit 1
+    ;;
+  esac
+elif [[ -f "/etc/debian_version" ]]; then
+  debian_version=$(cat /etc/debian_version)
+  apt-get install -y curl
+elif [[ -f "/etc/fedora-release" ]]; then
+  fedora_version=$(cat /etc/fedora-release)
+  case $fedora_version in
+    *26*|*25*)
+      dnf -y install curl
+    ;;
+    *)
+      echo "Unsupported fedora. ($fedora_version)"
+      exit 1
+    ;;
+  esac
+elif [[ -f "/etc/redhat-release" ]]; then
+  redhat_version=$(cat /etc/redhat-release)
+  case $redhat_version in
+    *CentOS*7.*)
+      yum -y install curl
+      exit 1
+    ;;
+    *)
+      echo "Unsupported redhat. ($redhat_version)"
+      exit 1
+    ;;
+  esac
+else
+  echo "Unsupported OS. (Use -f|--force to force installation via bash installer.)"
+  exit 1
+fi
+}
+
+install_prerequesites
+
 function check_tools() {
   local bin=""
   local i=""
@@ -38,11 +90,6 @@ parse_opts $*
 channel=$1
 if [[ "unstable" != "${channel}" ]]; then
   echo "The only channel is unstable for now. So call it $0 unstable"
-  exit 1
-fi
-
-if [[ "$force" != "yes" && "$UID" != "0" ]]; then
-  echo "Must be run as root. (Use -f|--force to override.)"
   exit 1
 fi
 
