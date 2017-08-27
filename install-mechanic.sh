@@ -23,7 +23,15 @@ if [[ -f "/etc/lsb-release" ]]; then
   esac
 elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
-  apt-get install -y curl
+  case $fedora_version in
+    *sid*)
+      apt-get remove -y apt-listchanges 
+      apt-get install -y curl
+    ;;
+    *wheezy*|*jessie*|*stretch*)
+      apt-get install -y curl
+    ;;
+  esac
 elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
