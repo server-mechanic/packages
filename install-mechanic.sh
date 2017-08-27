@@ -109,6 +109,9 @@ if [[ -f "/etc/lsb-release" ]]; then
     Ubuntuyakkety)
       install_debian_based ubuntu yakkety
     ;;
+    Ubuntuzesty)
+      install_debian_based ubuntu zesty
+    ;;
     *)
       echo "Unsupported lsb linux $DISTRIB_ID $DISTRIB_CODENAME."
       exit 1
@@ -117,8 +120,11 @@ if [[ -f "/etc/lsb-release" ]]; then
 elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
   case $debian_version in
-    *9.*|*sid*)
+    *10.*|*sid*)
       install_debian_based debian sid
+    ;;
+    *9.*|*stretch*)
+      install_debian_based debian stretch
     ;;
     *8.*|*jessie*)
       install_debian_based debian jessie
@@ -134,6 +140,10 @@ elif [[ -f "/etc/debian_version" ]]; then
 elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
+    *26*)
+      install_redhat_based fedora 26
+      exit 1
+    ;;
     *25*)
       install_redhat_based fedora 25
       exit 1
