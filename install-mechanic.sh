@@ -23,7 +23,7 @@ if [[ -f "/etc/lsb-release" ]]; then
   esac
 elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
-  case $fedora_version in
+  case $debian_version in
     *sid*)
       apt-get remove -y apt-listchanges 
       apt-get install -y curl
