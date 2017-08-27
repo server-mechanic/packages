@@ -25,11 +25,10 @@ elif [[ -f "/etc/debian_version" ]]; then
   debian_version=$(cat /etc/debian_version)
   case $debian_version in
     *sid*)
-      apt-get remove -y apt-listchanges 
-      apt-get install -y curl
+      apt-get update && apt-get remove -y apt-listchanges && apt-get install -y curl
     ;;
     *wheezy*|*jessie*|*stretch*)
-      apt-get install -y curl
+      apt-get update && apt-get install -y curl
     ;;
   esac
 elif [[ -f "/etc/fedora-release" ]]; then
