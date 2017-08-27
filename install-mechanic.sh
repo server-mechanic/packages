@@ -51,7 +51,6 @@ elif [[ -f "/etc/redhat-release" ]]; then
   case $redhat_version in
     *CentOS*7.*)
       yum -y install which curl
-      exit 1
     ;;
     *)
       echo "Unsupported redhat. ($redhat_version)"
