@@ -5,29 +5,15 @@
 ## mechanic *unstable*
 
 Server Mechanic is supported on:
-* Ubuntu: xenial, yakkety
-* Debian: wheezy, jessie (currently broken), sid
+* Ubuntu: xenial, yakkety, zesty
+* Debian: wheezy, jessie (currently broken), stretch, sid
+* Fedora: 25, 26
+* CentOS: 7
 
 ### Simple install (for all supported distributions)
 
 ```
 curl -s https://raw.githubusercontent.com/server-mechanic/packages/master/install-mechanic.sh | sudo bash -s unstable
-```
-
-### debian jessie
-
-#### Support for debian jessie is broken now because of apt rejecting install via https.
-
-```
-apt-get update && apt-get install -y apt-transport-https
-
-cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
-deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ jessie unstable
-EOB
-
-apt-get update && apt-get install -y mechanic
-
-/usr/sbin/mechanic version
 ```
 
 ### debian sid
@@ -37,6 +23,36 @@ apt-get update && apt-get install -y apt-transport-https
 
 cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
 deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ sid unstable
+EOB
+
+apt-get update && apt-get install -y mechanic
+
+/usr/sbin/mechanic version
+```
+
+### debian stretch
+
+```
+apt-get update && apt-get install -y apt-transport-https
+
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
+deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ stretch unstable
+EOB
+
+apt-get update && apt-get install -y mechanic
+
+/usr/sbin/mechanic version
+```
+
+### debian jessie
+
+#### Support for debian jessie is currently broken because of apt rejecting install via https.
+
+```
+apt-get update && apt-get install -y apt-transport-https
+
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
+deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/debian/ jessie unstable
 EOB
 
 apt-get update && apt-get install -y mechanic
@@ -82,6 +98,46 @@ deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/mas
 EOB
 
 apt-get update && apt-get install -y mechanic
+```
+
+### ubuntu zesty
+
+```
+apt-get update && apt-get install -y apt-transport-https
+
+cat - >/etc/apt/sources.list.d/server-mechanic.list <<EOB
+deb [trusted=yes] https://raw.githubusercontent.com/server-mechanic/packages/master/apt/ubuntu/ zesty unstable
+EOB
+
+apt-get update && apt-get install -y mechanic
+```
+
+### fedora 25, 26
+
+```
+cat - >/etc/yum.repos.d/server-mechanic.repo <<EOB
+[servermechanicrepo]
+name=Server Mechanic Repository
+baseurl=https://raw.githubusercontent.com/server-mechanic/packages/master/rpm/fedora/\$releasever/unstable/\$basearch
+enabled=1
+gpgcheck=0
+EOB
+
+dnf install -y mechanic
+```
+
+### centos 7
+
+```
+cat - >/etc/yum.repos.d/server-mechanic.repo <<EOB
+[servermechanicrepo]
+name=Server Mechanic Repository
+baseurl=https://raw.githubusercontent.com/server-mechanic/packages/master/rpm/centos/\$releasever/unstable/\$basearch
+enabled=1
+gpgcheck=0
+EOB
+
+dnf install -y mechanic
 ```
 
 ## Issues
