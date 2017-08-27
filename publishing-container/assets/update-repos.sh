@@ -29,7 +29,7 @@ done
 }
 
 function updateRpmRepos() {
-for dist_dir in fedora/25/unstable centos/7/unstable; do
+for dist_dir in fedora/25/unstable fedora/26/unstable centos/7/unstable; do
   repo_base_dir=$BUILD_DIR/rpm/$dist_dir
   for arch in i686 x86_64; do 
     repo_dir=$repo_base_dir/$arch
@@ -40,8 +40,10 @@ done
 
 updateAptRepos debian wheezy
 updateAptRepos debian jessie
+updateAptRepos debian stretch
 updateAptRepos debian sid
 updateAptRepos ubuntu xenial
 updateAptRepos ubuntu yakkety
+updateAptRepos ubuntu zesty
 
 updateRpmRepos
