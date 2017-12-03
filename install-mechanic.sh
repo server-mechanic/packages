@@ -38,7 +38,7 @@ elif [[ -f "/etc/debian_version" ]]; then
 elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
-    *26*|*25*)
+    *26*|*25*|*27*)
       dnf -y install which curl
     ;;
     *)
@@ -198,6 +198,9 @@ elif [[ -f "/etc/debian_version" ]]; then
 elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
+    *27*)
+      install_redhat_based fedora 27
+    ;;
     *26*)
       install_redhat_based fedora 26
     ;;
