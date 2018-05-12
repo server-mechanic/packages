@@ -5,9 +5,9 @@
 ## mechanic *unstable*
 
 Server Mechanic is supported on:
-* Ubuntu: xenial, yakkety, zesty
+* Ubuntu: xenial, yakkety, zesty, artful, bionic
 * Debian: wheezy, jessie (currently broken), stretch, sid
-* Fedora: 25, 26
+* Fedora: 25, 26, 27, 28
 * CentOS: 7
 
 ### Simple install (for all supported distributions)
