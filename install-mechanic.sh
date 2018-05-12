@@ -13,7 +13,7 @@ function install_prerequesites() {
 if [[ -f "/etc/lsb-release" ]]; then
   source /etc/lsb-release
   case "$DISTRIB_ID$DISTRIB_CODENAME" in
-    Ubuntuxenial|Ubuntuyakkety|Ubuntuzesty)
+    Ubuntuxenial|Ubuntuyakkety|Ubuntuzesty|Ubuntuartful|Ubuntubionic)
       apt-get update && apt-get install -y curl
     ;;
     *)
@@ -38,7 +38,7 @@ elif [[ -f "/etc/debian_version" ]]; then
 elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
-    *26*|*25*|*27*)
+    *26*|*25*|*27*|*28*)
       dnf -y install which curl
     ;;
     *)
@@ -170,6 +170,12 @@ if [[ -f "/etc/lsb-release" ]]; then
     Ubuntuzesty)
       install_debian_based ubuntu zesty
     ;;
+    Ubuntuartful)
+      install_debian_based ubuntu artful
+    ;;
+    Ubuntubionic)
+      install_debian_based ubuntu bionic
+    ;;
     *)
       echo "Unsupported lsb linux $DISTRIB_ID $DISTRIB_CODENAME."
       exit 1
@@ -198,6 +204,9 @@ elif [[ -f "/etc/debian_version" ]]; then
 elif [[ -f "/etc/fedora-release" ]]; then
   fedora_version=$(cat /etc/fedora-release)
   case $fedora_version in
+    *28*)
+      install_redhat_based fedora 28
+    ;;
     *27*)
       install_redhat_based fedora 27
     ;;
