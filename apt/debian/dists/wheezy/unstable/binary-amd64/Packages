@@ -1,0 +1,16 @@
+Package: mechanic
+Version: 0.7-0wheezy2
+Architecture: all
+Essential: no
+Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
+Installed-Size: 59987
+Depends: bash, python2.7, sqlite3
+Filename: dists/wheezy/unstable/binary-amd64/mechanic_0.7-0wheezy2_all.deb
+Size: 12802
+MD5sum: f09fe14450660bc692fc56fdf02bf589
+SHA1: 0c2c978d4110daf9b7489526d88c18ec3019967a
+SHA256: 16f31efbbbf6653faab5ab5c12e0a12d78df06e75b2e33490feccc689fd87ff6
+Section: system
+Priority: optional
+Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
+

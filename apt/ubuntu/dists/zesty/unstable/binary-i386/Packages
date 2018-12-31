@@ -1,0 +1,16 @@
+Package: mechanic
+Version: 0.7-0ubuntu-zesty2
+Architecture: all
+Essential: no
+Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
+Installed-Size: 59987
+Depends: bash, python2.7, sqlite3
+Filename: dists/zesty/unstable/binary-i386/mechanic_0.7-0ubuntu-zesty2_all.deb
+Size: 11846
+MD5sum: 5b7f81c4bec9475cda6111baa3393faa
+SHA1: 9707de502bc320b2d6ee9b85ba4e414c9f00b5b7
+SHA256: 689d79b502b500ce1f09f5839796b99af56bbfd07075002ba5679b0356096468
+Section: system
+Priority: optional
+Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
+
