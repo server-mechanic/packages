@@ -1,15 +1,15 @@
 Package: mechanic
-Version: 0.7-0stretch2
+Version: 0.7-0stretch3
 Architecture: all
 Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
-Installed-Size: 59987
+Installed-Size: 59643
 Depends: bash, python2.7, sqlite3
-Filename: dists/stretch/unstable/binary-i386/mechanic_0.7-0stretch2_all.deb
-Size: 11830
-MD5sum: e2784f171c16ce0283fd933ce1c08c98
-SHA1: 1c363996e60033fc6d664059ae46872dc4f7f1e9
-SHA256: d2305d72dfa263efa8c5c9c4c3a0a2bda8f092969d99dd077a9303a0b913c526
+Filename: dists/stretch/unstable/binary-i386/mechanic_0.7-0stretch3_all.deb
+Size: 11872
+MD5sum: 14c717e11dcb2f716069dd712c6e50f4
+SHA1: 19578af3174e4adffafd6882e0daa9d9fa4bf365
+SHA256: b0aa9390c29364038697b64548b13b227276fa9680d3350ed9c52427a49cda26
 Section: system
 Priority: optional
 Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
