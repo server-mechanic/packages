@@ -29,7 +29,7 @@ done
 }
 
 function updateRpmRepos() {
-for dist_dir in fedora/25/unstable fedora/26/unstable centos/7/unstable; do
+for dist_dir in fedora/25/unstable fedora/26/unstable fedora/27/unstable fedora/28/unstable fedora/29/unstable centos/7/unstable; do
   repo_base_dir=$BUILD_DIR/rpm/$dist_dir
   for arch in i686 x86_64; do 
     repo_dir=$repo_base_dir/$arch

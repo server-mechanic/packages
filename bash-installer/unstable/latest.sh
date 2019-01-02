@@ -1,1 +1,1 @@
-bash-installer-0.7_3.sh
+bash-installer-0.7_4.sh
