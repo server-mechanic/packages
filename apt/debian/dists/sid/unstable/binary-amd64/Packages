@@ -1,15 +1,15 @@
 Package: mechanic
-Version: 0.7-0sid3
+Version: 0.7-0sid4
 Architecture: all
 Essential: no
 Maintainer: Cornelius Buschka <cornelius.buschka@gmail.com>
 Installed-Size: 59643
 Depends: bash, python2.7, sqlite3
-Filename: dists/sid/unstable/binary-amd64/mechanic_0.7-0sid3_all.deb
-Size: 11948
-MD5sum: 1f4281d05c0aeefc9c6d5710cba690a8
-SHA1: 72dff0573575850fc8f541d16157626c553fab31
-SHA256: 1e000da2426189416fb98be9e03cd043f09c7aecbf2982dc684883126d47eb97
+Filename: dists/sid/unstable/binary-amd64/mechanic_0.7-0sid4_all.deb
+Size: 11936
+MD5sum: 2ae2c48d3d0155de942f36d27bbda28c
+SHA1: 2caba2bceaec6d88b0187099b3b93722950e1c72
+SHA256: 41b723fb7feb2b8b4dd884ef459097a8b2442ff54ca68628fc6ce42244796e52
 Section: system
 Priority: optional
 Description: Server Mechanic: Server Evolution Made Easy. See http://www.server-mechanic.org.
